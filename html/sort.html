@@ -354,7 +354,7 @@ var aDiv=document.getElementsByClassName("good_add");
 //var arr_json=[{"id":"berry_list"},{"id":"mellon_list"},{"id":"orange_list"},{"id":"stone_list"},{"id":"kernel_list"}];
 for(var i=0; i<aLi1.length;i++){
 	aLi1[i].index = i;
-	aLi1[i].onclick = function(){
+	aLi1[i].touchstart = function(){
 		var n = this.index;
 		for(var j=0; j<aLi1.length;j++){
 			aLi1[j].style.backgroundColor = "#EEEEEE";
@@ -369,13 +369,13 @@ for(var i=0; i<aLi1.length;i++){
 		}
 	}
 for(var i=0;i<aDiv.length;i++){
-	aDiv[i].onclick=function(){
+	aDiv[i].touchstart=function(){
 		oImg.innerHTML++;
 	}	
 }
 $(function(){
 		var onOff = true;
-	    $("#price").click(function(){
+	    $("#price").touchstart(function(){
 	    	if(onOff){
 //	    		for(var i=0;i<arr_json.length;i++){
 //	    			for(var )
@@ -417,7 +417,7 @@ $(function(){
 	}); 
 	
 	$(function(){
-	    $("#sales").click(function(){
+	    $("#sales").touchstart(function(){
 		        var div= $('#berry_list').find('li');
 		        var arr = Array.prototype.slice.call(div);
 		        arr.sort(function(v1,v2){
